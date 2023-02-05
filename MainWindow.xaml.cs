@@ -87,11 +87,11 @@ namespace list_T
             int lepisodes = int.Parse(txtEpisodes.Text);
             int index = int.Parse(txtinsertto.Text);
 
-
-            animeList.Insert(index,fanime);
-            episodesList.Insert(index,lepisodes);
+            animeList.Insert(index, fanime);
+            episodesList.Insert(index, lepisodes);
             DisplayFromList();
 
+           
         }
 
         
@@ -111,7 +111,7 @@ namespace list_T
             }
             else
             {
-                MessageBox.Show("was not rmoved");
+                MessageBox.Show("was not removed");
             }
  
             foreach (string name in animeList)
@@ -134,6 +134,10 @@ namespace list_T
             {
                 animeList.RemoveAt(index);
                 episodesList.RemoveAt(index);
+            }
+            else
+            {
+                MessageBox.Show("input a number ");
             }
 
             DisplayFromList();
