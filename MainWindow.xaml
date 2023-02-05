@@ -6,7 +6,45 @@
         xmlns:local="clr-namespace:list_T"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+    <Grid Background="Black">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="127*"/>
+            <ColumnDefinition Width="273*"/>
+        </Grid.ColumnDefinitions>
+        <Canvas Grid.Column="1" Margin="7,0,0,3">
+            <Canvas.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF291E1E" Offset="0.24"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Canvas.Background>
+            <RichTextBox x:Name="RichTextBox" Height="409" Width="420" Canvas.Left="65" Canvas.Top="10">
+                <FlowDocument>
+                    <Paragraph>
+                        <Run x:Name="runDisplay" Text=""/>
+                    </Paragraph>
+                </FlowDocument>
+            </RichTextBox>
+        </Canvas>
+        <StackPanel Background="#FFFCF0F0" Grid.ColumnSpan="2" Margin="1,-1,545,1">
+            <Label Content="anime name "/>
+
+            <Label/>
+            <TextBox x:Name="txtAnime" TextWrapping="Wrap" Width="250" Height="48"/>
+            <Label Content="episodes "/>
+            <TextBox x:Name="txtEpisodes" TextWrapping="Wrap" Width="250" Height="39"/>
+            <Button x:Name="BtnAddAnime" Content="ADD ANIME" Click="Button_Click"/>
+            <Label Height="33" Content="{}{==========+=&lt;&gt;=+===========}"/>
+            <TextBox x:Name="txtinsertto" TextWrapping="Wrap" Width="106" Height="38"/>
+            <Button Content="insert to list " Click="Button_Click_1"/>
+            <Label Content="remove "/>
+            <TextBox x:Name="txtRemove" TextWrapping="Wrap" Width="258" Height="43" />
+            <Button x:Name="BtnRemove" Content="take out name " Click="BtnRemove_Click"/>
+            <TextBox x:Name="txtremoveNum" TextWrapping="Wrap" Width="253" Height="29"/>
+            <Button x:Name="btnremoveNum" Content="take outnumber " Click="btnremoveNum_Click"/>
+            <Button x:Name="btnclear" Content="clear the list " Height="35" Width="252" Click="btnclear_Click"/>
+        </StackPanel>
+
+
     </Grid>
 </Window>
